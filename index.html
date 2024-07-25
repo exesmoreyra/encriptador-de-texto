@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./robot.ico" type="image/x-icon">
+</head>
+<body>
+    <button id="toggleMode" onclick="toggleMode()">Modo Nocturno</button>
+    <div class="container">
+        <h1>Encriptador de Texto</h1>
+        <div class="text-areas">
+            <textarea id="inputText" placeholder="Ingresa el texto aquí"></textarea>
+            <textarea id="outputText" placeholder="El resultado aparecerá aquí" readonly></textarea>
+        </div>
+        <div class="buttons">
+            <button onclick="encriptar()">Encriptar</button>
+            <button onclick="desencriptar()">Desencriptar</button>
+            <button onclick="copiarTexto()">Copiar</button>
+            <button onclick="limpiarTexto()">Limpiar</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p class="quote"><strong>"La encriptación es la última defensa contra el espionaje masivo" - Bruce Schneier</strong></p>
+            <p>
+                <a href="https://github.com/tu-usuario" target="_blank">
+                <img src="./assets/github.png" alt="GitHub" class="icon"> https://github.com/exesmoreyra</a>
+            </p>
+            <p>
+                <a href="mailto:tu-correo@example.com">
+                <img src="./assets/gmail.png" alt="Gmail" class="icon"> exesmoreyra@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

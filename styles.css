@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/fondo\ matrix\ espiral.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggleMode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#toggleMode:hover {
+    background-color: #4ca1af;
+    color: #000;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ecf0f1;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.text-areas {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5) url('/assets/Fondo\ matrix.jpg') repeat center center;
+    background-size: contain;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    gap: 20px; /* Añadir espacio entre los cuadros de texto */
+}
+
+textarea {
+    width: 48%;
+    height: 120px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #34495e;
+    background: rgba(255, 255, 255, 0.7);
+    color: #000;
+    resize: none;
+    font-size: 16px; /* Aumentar el tamaño del texto */
+    transition: border-color 0.3s ease;
+}
+
+textarea::placeholder {
+    font-size: 16px; /* Aumentar el tamaño del texto del placeholder */
+}
+
+textarea:focus {
+    border-color: #4ca1af;
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px; /* Añadir espacio entre los botones */
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4ca1af;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b8d99;
+    transform: scale(1.1);
+    color: #000;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(0, 195, 255);
+    background: #2e2e2e;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content a {
+    color: rgb(0, 195, 255);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+
+/* Modo Nocturno */
+body.night-mode {
+    background-color: #1e1e1e;
+    color: #c0c0c0;
+}
+
+body.night-mode .container {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.night-mode textarea {
+    background: rgba(0, 0, 0, 0.7);
+    color: #c0c0c0;
+    border-color: #555;
+}
+
+body.night-mode textarea:focus {
+    border-color: #777;
+}
+
+body.night-mode button {
+    background-color: #333;
+    color: #c0c0c0;
+}
+
+body.night-mode button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+body.night-mode footer {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.night-mode a {
+    color: #4ca1af;
+}
+
+body.night-mode a:hover {
+    color: #1abc9c;
+}
