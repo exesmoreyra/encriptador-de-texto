@@ -1,6 +1,6 @@
 function encriptar() {
     let inputText = document.getElementById('inputText').value;
-    let outputText = btoa(inputText); // Simple base64 encoding
+    let outputText = btoa(inputText); 
     document.getElementById('outputText').value = outputText;
 }
 
@@ -8,7 +8,7 @@ function desencriptar() {
     let inputText = document.getElementById('inputText').value;
     let outputText;
     try {
-        outputText = atob(inputText); // Simple base64 decoding
+        outputText = atob(inputText); 
     } catch (e) {
         outputText = 'Texto no válido para desencriptar';
     }
@@ -18,7 +18,7 @@ function desencriptar() {
 function copiarTexto() {
     let outputText = document.getElementById('outputText');
     outputText.select();
-    outputText.setSelectionRange(0, 99999); // For mobile devices
+    outputText.setSelectionRange(0, 99999); 
     document.execCommand('copy');
     alert('Texto copiado al portapapeles');
 }
