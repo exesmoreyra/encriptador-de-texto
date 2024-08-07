@@ -70,7 +70,7 @@ h1 {
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
-    gap: 20px; /* Añadir espacio entre los cuadros de texto */
+    gap: 20px; 
 }
 
 textarea {
@@ -82,13 +82,12 @@ textarea {
     background: rgba(255, 255, 255, 0.7);
     color: #000;
     resize: none;
-    font-size: 16px; /* Aumentar el tamaño del texto */
+    font-size: 16px; 
     transition: border-color 0.3s ease;
 }
 
 textarea::placeholder {
-    font-size: 16px; /* Aumentar el tamaño del texto del placeholder */
-}
+    font-size: 16px; 
 
 textarea:focus {
     border-color: #4ca1af;
@@ -99,7 +98,7 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 10px; /* Añadir espacio entre los botones */
+    gap: 10px; 
 }
 
 button {
