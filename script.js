@@ -1,4 +1,4 @@
-// Funcion para encriptar 
+// funcion para encriptar 
 function encriptarTexto(texto) {
     return texto
         .replace(/e/g, "enter")
@@ -8,7 +8,7 @@ function encriptarTexto(texto) {
         .replace(/u/g, "ufat");
 }
 
-// Funcion para desencriptar 
+// funcion para desencriptar 
 function desencriptarTexto(textoEncriptado) {
     return textoEncriptado
         .replace(/enter/g, "e")
@@ -18,12 +18,16 @@ function desencriptarTexto(textoEncriptado) {
         .replace(/ufat/g, "u");
 }
 
-// Funcion para validar texto (solo minúsculas, sin acentos ni caracteres especiales)
+// funcion para validar texto (solo minúsculas, sin acentos ni caracteres especiales)
 function validarTexto(texto) {
     const regex = /^[a-z\s]*$/; // Solo minusculas y espacios
     return regex.test(texto);
 }
-
+// funcion para cambiar entre modo día y modo nocturno
+document.getElementById("toggleMode").addEventListener("click", function () {
+    document.body.classList.toggle("night-mode");
+});
+//funcion nightmode 
 document.getElementById("encriptarBtn").addEventListener("click", function () {
     let texto = document.getElementById("inputTexto").value.trim();
 
