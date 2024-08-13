@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/assets/fondo\ matrix\ espiral.jpg') no-repeat center center fixed;
+    background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     color: #fff;
@@ -65,12 +65,12 @@ h1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5) url('/assets/Fondo\ matrix.jpg') repeat center center;
+    background: rgba(0, 0, 0, 0.5) url('robot.png') no-repeat center center;
     background-size: contain;
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
-    gap: 20px; 
+    gap: 20px; /* Añadir espacio entre los cuadros de texto */
 }
 
 textarea {
@@ -82,12 +82,13 @@ textarea {
     background: rgba(255, 255, 255, 0.7);
     color: #000;
     resize: none;
-    font-size: 16px; 
+    font-size: 16px; /* Aumentar el tamaño del texto */
     transition: border-color 0.3s ease;
 }
 
 textarea::placeholder {
-    font-size: 16px; 
+    font-size: 16px; /* Aumentar el tamaño del texto del placeholder */
+}
 
 textarea:focus {
     border-color: #4ca1af;
@@ -98,7 +99,7 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 10px; 
+    gap: 10px; /* Añadir espacio entre los botones */
 }
 
 button {
@@ -122,8 +123,8 @@ button:hover {
 footer {
     margin-top: 20px;
     text-align: center;
-    color: rgb(0, 195, 255);
-    background: #2e2e2e;
+    color: #00f;
+    background: #000;
     padding: 20px;
     width: 100%;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
@@ -145,7 +146,7 @@ footer {
 }
 
 .footer-content a {
-    color: rgb(0, 195, 255);
+    color: #00f;
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
     display: flex;
@@ -166,7 +167,7 @@ footer {
     font-style: italic;
     margin-bottom: 10px;
     font-family: 'Orbitron', sans-serif;
-    
+    font-weight: bold; /* Añadir negrita a la cita */
 }
 
 /* Modo Nocturno */
@@ -209,5 +210,5 @@ body.night-mode a {
 }
 
 body.night-mode a:hover {
-    color: #1abc9c;}
+    color: #1abc9c;
 }
