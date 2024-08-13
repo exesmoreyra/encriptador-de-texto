@@ -8,18 +8,18 @@
     <link rel="icon" href="./robot.ico" type="image/x-icon">
 </head>
 <body>
-    <button id="toggleMode" onclick="toggleMode()">Modo Nocturno</button>
+    <button id="toggleMode">Modo Nocturno</button>
     <div class="container">
         <h1>Encriptador de Texto</h1>
         <div class="text-areas">
-            <textarea id="inputText" placeholder="Ingresa el texto aquí"></textarea>
-            <textarea id="outputText" placeholder="El resultado aparecerá aquí" readonly></textarea>
+            <textarea id="inputTexto" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea id="outputTexto" placeholder="El resultado aparecerá aquí"></textarea>
         </div>
         <div class="buttons">
-            <button onclick="encriptar()">Encriptar</button>
-            <button onclick="desencriptar()">Desencriptar</button>
-            <button onclick="copiarTexto()">Copiar</button>
-            <button onclick="limpiarTexto()">Limpiar</button>
+            <button id="encriptarBtn">Encriptar</button>
+            <button id="desencriptarBtn">Desencriptar</button>
+            <button id="copiarBtn">Copiar</button>
+            <button id="limpiarBtn">Limpiar</button>
         </div>
     </div>
     <footer>
