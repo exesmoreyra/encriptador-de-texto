@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('/assets/fondo\ matrix\ espiral.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     color: #fff;
@@ -65,12 +65,12 @@ h1 {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5) url('robot.png') no-repeat center center;
+    background: rgba(0, 0, 0, 0.5) url('/assets/Fondo\ matrix.jpg') repeat center center;
     background-size: contain;
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
-    gap: 20px; /* Añadir espacio entre los cuadros de texto */
+    gap: 20px; 
 }
 
 textarea {
@@ -82,12 +82,12 @@ textarea {
     background: rgba(255, 255, 255, 0.7);
     color: #000;
     resize: none;
-    font-size: 16px; /* Aumentar el tamaño del texto */
+    font-size: 16px; 
     transition: border-color 0.3s ease;
 }
 
 textarea::placeholder {
-    font-size: 16px; /* Aumentar el tamaño del texto del placeholder */
+    font-size: 16px; 
 }
 
 textarea:focus {
@@ -99,7 +99,7 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 10px; /* Añadir espacio entre los botones */
+    gap: 10px; 
 }
 
 button {
@@ -123,11 +123,11 @@ button:hover {
 footer {
     margin-top: 20px;
     text-align: center;
-    color: #00f;
-    background: #000;
+    color: rgb(0, 140, 255);
+    background: #0000009a;
     padding: 20px;
     width: 100%;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -4px 10px rgba(56, 56, 56, 0.3);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -146,7 +146,7 @@ footer {
 }
 
 .footer-content a {
-    color: #00f;
+    color: rgb(0, 140, 255);
     text-decoration: none;
     font-family: 'Orbitron', sans-serif;
     display: flex;
@@ -167,12 +167,12 @@ footer {
     font-style: italic;
     margin-bottom: 10px;
     font-family: 'Orbitron', sans-serif;
-    font-weight: bold; /* Añadir negrita a la cita */
+    font-weight: bold; 
 }
 
 /* Modo Nocturno */
 body.night-mode {
-    background-color: #1e1e1e;
+    background-color: #686666;
     color: #c0c0c0;
 }
 
