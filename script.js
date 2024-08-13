@@ -1,39 +1,65 @@
-function encriptar() {
-    let inputText = document.getElementById('inputText').value;
-    let outputText = btoa(inputText); 
-    document.getElementById('outputText').value = outputText;
+// Funcion para encriptar 
+function encriptarTexto(texto) {
+    return texto
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
 }
 
-function desencriptar() {
-    let inputText = document.getElementById('inputText').value;
-    let outputText;
-    try {
-        outputText = atob(inputText); 
-    } catch (e) {
-        outputText = 'Texto no válido para desencriptar';
+// Funcion para desencriptar 
+function desencriptarTexto(textoEncriptado) {
+    return textoEncriptado
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+}
+
+// Funcion para validar texto (solo minúsculas, sin acentos ni caracteres especiales)
+function validarTexto(texto) {
+    const regex = /^[a-z\s]*$/; // Solo minusculas y espacios
+    return regex.test(texto);
+}
+
+document.getElementById("encriptarBtn").addEventListener("click", function () {
+    let texto = document.getElementById("inputTexto").value.trim();
+
+    if (!validarTexto(texto)) {
+        alert("Por favor, ingrese solo letras minúsculas sin acentos ni caracteres especiales.");
+        return;
     }
-    document.getElementById('outputText').value = outputText;
-}
 
-function copiarTexto() {
-    let outputText = document.getElementById('outputText');
-    outputText.select();
-    outputText.setSelectionRange(0, 99999); 
-    document.execCommand('copy');
-    alert('Texto copiado al portapapeles');
-}
+    let textoEncriptado = encriptarTexto(texto);
+    document.getElementById("outputTexto").value = textoEncriptado;
+});
 
-function limpiarTexto() {
-    document.getElementById('inputText').value = '';
-    document.getElementById('outputText').value = '';
-}
+document.getElementById("desencriptarBtn").addEventListener("click", function () {
+    let texto = document.getElementById("inputTexto").value.trim();
 
-function toggleMode() {
-    document.body.classList.toggle('night-mode');
-    let toggleButton = document.getElementById('toggleMode');
-    if (document.body.classList.contains('night-mode')) {
-        toggleButton.textContent = 'Modo Día';
-    } else {
-        toggleButton.textContent = 'Modo Nocturno';
+    if (!validarTexto(texto)) {
+        alert("Por favor, ingrese solo letras minúsculas sin acentos ni caracteres especiales.");
+        return;
     }
-}
+
+    let textoDesencriptado = desencriptarTexto(texto);
+    document.getElementById("outputTexto").value = textoDesencriptado;
+});
+
+// Funcion para copiar texto 
+document.getElementById("copiarBtn").addEventListener("click", function () {
+    let texto = document.getElementById("outputTexto").value;
+    navigator.clipboard.writeText(texto).then(function () {
+        alert("Texto copiado al portapapeles.");
+    }, function () {
+        alert("Error al copiar el texto.");
+    });
+});
+
+// Funcion para limpiar los cuadros de texto
+document.getElementById("limpiarBtn").addEventListener("click", function () {
+    document.getElementById("inputTexto").value = "";
+    document.getElementById("outputTexto").value = "";
+});
